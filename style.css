@@ -8,9 +8,15 @@
 }
 
 html{
-    --bg1: #020c1b;
+    /* --bg1: #020c1b;
     --text1: #8ee4af;
     --text2: #edf5e1;
+    --link1: #5cdb95;
+    --link2: #907163;
+    --link3: #379683; */
+    --bg1: #333;
+    --text1: #dddee0;
+    --text2: #e45735;
     --link1: #5cdb95;
     --link2: #907163;
     --link3: #379683;
@@ -56,7 +62,9 @@ section:nth-child(1){
 section + section{
     padding: 20px 0;
 }
-
+section > h2 {
+    margin: 0 auto;
+}
 
 .left{
     display: flex;
@@ -115,9 +123,6 @@ section + section{
     display: flex;
     flex-direction: column;
 }
-#skills h2{
-    margin: 0 auto;
-}
 #skills ul{
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -151,13 +156,17 @@ section + section{
 }
 
 
+
+/* Download Resume */
+#resume iframe{
+    flex: 1 1 auto;
+}
+
+
 /* Social Media and links */
 #socials{
     display: flex;
     flex-direction: column;
-}
-#socials h2{
-    margin: 0 auto;
 }
 #socials .links{
     flex: 1 1;
@@ -175,6 +184,11 @@ section + section{
     width: var(--icon-size);
     height: var(--icon-size);
     margin-top: 10px;
+}
+#socials button{
+    margin: 0 auto;
+    width: fit-content;
+    padding: 1.25em;
 }
 
 
