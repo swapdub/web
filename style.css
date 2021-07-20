@@ -15,6 +15,7 @@ html{
     --link2: #907163;
     --link3: #379683; */
     --bg1: #333;
+    --bg2: #aef;
     --text1: #dddee0;
     --text2: #e45735;
     --link1: #5cdb95;
@@ -54,14 +55,14 @@ section{
     height: 100vh;
     display: flex;
     flex-wrap: wrap;
-    margin: 0 80px;
+    /* border: solid 20px var(--bg1); */
+    /* margin: 0 80px; */
+    padding: 20px 80px;
 }
 section:nth-child(1){
-    color: var(--text1);
+    /* background-color: var(--bg2); */
 }
-section + section{
-    padding: 20px 0;
-}
+
 section > h2 {
     margin: 0 auto;
 }
