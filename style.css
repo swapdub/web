@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
 *, ::before, ::after{
-    margin: 0;    
+    margin: 0;  
+    padding: 0;  
     text-decoration: none;
     box-sizing: border-box;
 }
@@ -14,15 +15,20 @@ html{
     --link2: #907163;
     --link3: #379683;
 }
+a{
+    color: var(--text2);
+}
 
 h1{
     font-size: 5rem;
+    font-weight: bolder;
 }
 h2{
     font-size: 4rem;
 }
 p, li{
     font-size: 2rem;
+    font-weight: lighter;
 }
 body{
     font-family: 'Roboto', sans-serif;
@@ -47,6 +53,10 @@ section{
 section:nth-child(1){
     color: var(--text1);
 }
+section + section{
+    padding: 20px 0;
+}
+
 
 .left{
     display: flex;
@@ -63,14 +73,14 @@ section:nth-child(1){
 }
 
 
+
 #intro .floating { 
     animation-name: floating;
     animation-duration: 3s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
     margin-bottom: 20px;
-}
- 
+} 
 @keyframes floating {
     0% { transform: translate(0,  0px); }
     50%  { transform: translate(0, 15px); }
@@ -80,9 +90,18 @@ section:nth-child(1){
 #intro img{
     border-radius: 50%;
     /* height: calc(100vh - 100px); */
+    width: 90vh;
     height: 90vh;
     margin-left: 100px;
 }
+
+
+
+#aboutme img{
+    width: 80%;
+}
+
+
 
 #job{
     display: grid;
@@ -90,6 +109,77 @@ section:nth-child(1){
 }
 
 
+
+/* Skills Page */
+#skills{
+    display: flex;
+    flex-direction: column;
+}
+#skills h2{
+    margin: 0 auto;
+}
+#skills ul{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    flex-grow: 1;
+    place-content: center;
+}
+#skills li{
+    justify-self: center;
+    align-self: center;
+}
+#skills li:nth-child(1){
+    grid-column: 1;
+    grid-row: 1;
+}
+#skills li:nth-child(2){
+    grid-column: 2;
+    grid-row: 2;
+}
+#skills li:nth-child(3){
+    grid-column: 3;
+    grid-row: 3;
+}
+#skills li:nth-child(4){
+    grid-column: 4;
+    grid-row: 4;
+}
+#skills li:nth-child(5){
+    grid-column: 5;
+    grid-row: 5;
+}
+
+
+/* Social Media and links */
+#socials{
+    display: flex;
+    flex-direction: column;
+}
+#socials h2{
+    margin: 0 auto;
+}
+#socials .links{
+    flex: 1 1;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+#socials .links a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#socials img{
+    --icon-size: 80px;
+    width: var(--icon-size);
+    height: var(--icon-size);
+    margin-top: 10px;
+}
+
+
+/* Credits Page */
 .credits{
     flex-direction: column;
+    align-items: center;
 }
