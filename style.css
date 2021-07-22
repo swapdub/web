@@ -14,8 +14,8 @@ html{
     --link1: #5cdb95;
     --link2: #907163;
     --link3: #379683; */
-    --bg1: #333;
-    --bg2: #aef;
+    --bg1: #222;
+    --bg2: #333;
     --text1: #dddee0;
     --text2: #e45735;
     --link1: #5cdb95;
@@ -59,8 +59,10 @@ section{
     /* margin: 0 80px; */
     padding: 20px 80px;
 }
-section:nth-child(1){
-    /* background-color: var(--bg2); */
+section:nth-child(2){
+    background-color: var(--bg1);
+    /* font-color: #FFD100; */
+
 }
 
 section > h2 {
@@ -95,13 +97,15 @@ section > h2 {
     50%  { transform: translate(0, 15px); }
     100%   { transform: translate(0, -0px); }   
 }
+#intro h2{
+    font-size: 3rem;
+}
+#intro h1{
+    color: #e0a526;
 
+}
 #intro img{
-    border-radius: 50%;
-    /* height: calc(100vh - 100px); */
-    width: 90vh;
-    height: 90vh;
-    margin-left: 100px;
+    width: 100vh;
 }
 
 
@@ -190,6 +194,43 @@ section > h2 {
     margin: 0 auto;
     width: fit-content;
     padding: 1.25em;
+    background-color: #fcaebb;
+}
+
+
+#email{
+    display: flex;
+    /* align-items: center; */
+}
+#email > *{
+    display: grid;
+    place-items: center;
+    flex: 1 1;
+}
+#email .center{
+    flex: 1 1;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+}
+#email textarea, input{
+    background-color: #333;
+    border-radius: 10px;
+    /* min-width: 500px; */
+    min-height: 40px;
+    max-width: 50vw;
+}
+#email textarea{
+    flex: 1 0;
+}
+#email button{
+    border-radius: 10px;
+    background-color: var(--text2);
+    color: var(--text1);
+    padding: 1em 2em;
+}
+#email label, button{
+    margin: 10px 0;
 }
 
 
