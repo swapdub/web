@@ -17,7 +17,7 @@ html{
     --bg1: #222;
     --bg2: #333;
     --text1: #dddee0;
-    --text2: #e45735;
+    --text2: #e0a526;
     --link1: #5cdb95;
     --link2: #907163;
     --link3: #379683;
@@ -226,7 +226,7 @@ section > h2 {
 #email button{
     border-radius: 10px;
     background-color: var(--text2);
-    color: var(--text1);
+    color: var(--bg1);
     padding: 1em 2em;
 }
 #email label, button{
