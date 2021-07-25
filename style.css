@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
-*, ::before, ::after{
+*, *::before, *::after{
     margin: 0;  
     padding: 0;  
     text-decoration: none;
@@ -14,6 +14,7 @@ html{
     --link1: #5cdb95;
     --link2: #907163;
     --link3: #379683; */
+    --cool-font:italic clamp(1.25em, 15vw, 7em)/ 1.25 marck script, purisa, segoe script, comic sans ms, cursive;;
     --bg1: #222;
     --bg2: #333;
     --text1: #dddee0;
@@ -27,6 +28,7 @@ a{
 }
 
 h1{
+    font: var(--cool-font);
     font-size: 5rem;
     font-weight: bolder;
 }
@@ -38,6 +40,8 @@ p, li{
     font-weight: lighter;
 }
 body{
+    /* overflow-x: hidden;
+    overflow-y: hidden; */
     font-family: 'Roboto', sans-serif;
     display: flex;
     background: var(--bg1);
@@ -101,16 +105,25 @@ section > h2 {
     font-size: 3rem;
 }
 #intro h1{
-    color: #e0a526;
-
+    /* font-size: 4.5vw; */
+    color: var(--text2);
+    flex-basis: auto;
+    
 }
 #intro img{
     width: 100vh;
 }
+#intro .right{
+    display: grid;
+    place-content: center;
+}
 
 
 
-#aboutme img{
+#about-me ul{
+    margin-inline: 3ch;
+}
+#about-me img{
     width: 80%;
 }
 
@@ -127,6 +140,7 @@ section > h2 {
 #skills{
     display: flex;
     flex-direction: column;
+    /* flex-wrap: nowrap; */
 }
 #skills ul{
     display: grid;
@@ -134,7 +148,36 @@ section > h2 {
     grid-template-rows: repeat(5, 1fr);
     flex-grow: 1;
     place-content: center;
+    isolation: isolate;
 }
+#skills li{
+    font: var(--cool-font);
+	color: var(--text2);
+    position: relative;
+	padding: 2rem .25em;
+	text-decoration: none;
+    list-style: none;
+    font-size: initial;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 900;
+}
+#skills li::after{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    transform-origin: 0 100%;
+    transform: scaleY(0.05);
+    background: gold;
+    mix-blend-mode: difference;
+    transition: transform 0.25s;
+    content: '';
+}
+#skills li:hover{ outline: none;}
+#skills li:focus::after, #skills li:hover::after{transform: none;}
+
 #skills li{
     justify-self: center;
     align-self: center;
@@ -147,7 +190,7 @@ section > h2 {
     grid-column: 2;
     grid-row: 2;
 }
-#skills li:nth-child(3){
+#skills li ,#skills span:nth-child(3){
     grid-column: 3;
     grid-row: 3;
 }
@@ -213,12 +256,14 @@ section > h2 {
     display: flex;
     flex-direction: column;
 }
-#email textarea, input{
-    background-color: #333;
+#email textarea, 
+#email input{
+    background-color: var(--bg2);
     border-radius: 10px;
     /* min-width: 500px; */
     min-height: 40px;
     max-width: 50vw;
+    min-width: 80ch;
     color: var(--text1);
 }
 #email textarea{
@@ -230,13 +275,22 @@ section > h2 {
     color: var(--bg1);
     padding: 1em 2em;
 }
-#email label, button{
+#email label, 
+#email button{
     margin: 10px 0;
 }
 
 
 /* Credits Page */
-.credits{
+#credits{
     flex-direction: column;
     align-items: center;
+}
+
+.content-bot{
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: space-around;
+    flex: 1 1;
 }
