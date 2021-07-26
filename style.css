@@ -10,22 +10,16 @@
 }
 
 html {
-  /* --bg1: #020c1b;
-    --text1: #8ee4af;
-    --text2: #edf5e1;
-    --link1: #5cdb95;
-    --link2: #907163;
-    --link3: #379683; */
   --cool-font: italic clamp(1.25em, 15vw, 7em) / 1.25 marck script, purisa,
     segoe script, comic sans ms, cursive;
   --cool-font2: "Courier New", Courier, monospace;
+  
   --bg1: #222;
   --bg2: #333;
   --text1: #dddee0;
   --text2: #e0a526;
-  --link1: #5cdb95;
-  --link2: #907163;
-  --link3: #379683;
+
+  font-size: 2vh;
 }
 a {
   color: var(--text2);
@@ -45,12 +39,11 @@ li {
   font-weight: lighter;
 }
 body {
-  /* overflow-y: hidden; */
   font-family: "Roboto", sans-serif;
-  display: flex;
   background: var(--bg1);
   color: var(--text1);
   scroll-behavior: smooth;
+  display: flex;
 }
 .maincontainer {
   height: 100vh;
@@ -138,8 +131,14 @@ section > h2 {
 #about-me ul {
   margin-inline: 3ch;
 }
+#about-me .left {
+  display: flex;
+}
 #about-me img {
-  width: 80%;
+  /* width: fit-content; */
+  flex: 1 1;
+  padding: 0 60px 0 0;
+  /* margin: 0; */
 }
 
 #job {
@@ -212,7 +211,7 @@ section > h2 {
   /* place-content: center; */
 }
 #skills .project > li {
-  font-size: 16px;
+  font-size: 1.2rem;
   padding: 25px 0;
 }
 
@@ -281,7 +280,7 @@ section > h2 {
   padding: 1em 2em;
   background-color: var(--text2);
   color: var(--bg1);
-  font-size: 25px;
+  font-size: 1.5rem;
 }
 #email label,
 #email button {
@@ -302,5 +301,5 @@ section > h2 {
     padding: 1rem 0;
 }
 #credits .right *{
-    font-size: 18px;
+    font-size: 1.2rem;
 }
