@@ -223,7 +223,7 @@ section > h2 {
 
 
 /* Social Media and links */
-#email {
+#email{
   display: flex;
 }
 #email > * {
@@ -255,6 +255,10 @@ section > h2 {
   font-family: var(--cool-font2);
   font-weight: 700;
   text-align: start;
+  padding-top: 0px;
+  border-radius: 40px;
+  border-top: 5px solid var(--text2);
+  border-bottom: 10px solid var(--text2);
 }
 #email .center {
   flex: 1 1;
@@ -264,14 +268,33 @@ section > h2 {
 }
 #email textarea,
 #email input {
-  background-color: var(--bg2);
-  border-radius: 10px;
-  /* min-width: 500px; */
-  min-height: 40px;
-  max-width: 50vw;
-  min-width: 80ch;
   color: var(--text1);
+  background-color: var(--bg2);
+
+  border-radius: 10px;
+  border: none;
+  padding: 10px;
+
+  min-height: 40px;
+  max-width: 80ch;
+  min-width: 80ch;
+  resize: none;
 }
+
+#email textarea:hover,
+#email textarea:focus,
+#email textarea:active,
+#email textarea::selection,
+#email input:active,
+#email input:focus,
+#email input::selection,
+#email input:hover{
+  box-sizing: border-box;
+  outline: none;
+  border-bottom: 5px solid white;
+
+}
+
 #email textarea {
   flex: 1 0;
 }
@@ -281,6 +304,9 @@ section > h2 {
   background-color: var(--text2);
   color: var(--bg1);
   font-size: 1.5rem;
+}
+#email button:active{
+  border: 5px solid white;
 }
 #email label,
 #email button {
