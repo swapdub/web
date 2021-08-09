@@ -21,20 +21,16 @@ html {
 
   font-size: 2vh;
 }
-a {
-  color: var(--text2);
-}
-
+a {color: var(--text2);}
 h1 {
   font: var(--cool-font);
-  font-size: 5rem;
+  font-size: clamp(10px, 50px,5rem);
   font-weight: bolder;
 }
-h2 {
-  font-size: 4rem;
-}
-p,
-li {
+h2 {font-size: 4rem;}
+h3 {font-size: 3rem;}
+
+p, li {
   font-size: 2rem;
   font-weight: lighter;
 }
@@ -63,17 +59,11 @@ section {
 }
 section:nth-child(2) {
   background-color: var(--bg1);
-  /* font-color: #FFD100; */
 }
 
-section > h2 {
-  margin: 0 auto;
-}
+section > h2 {margin: 0 auto;}
 
 .left {
-  /* display: flex;
-  flex-direction: column;
-  justify-content: center; */
   display: grid;
   place-content: center;
   text-align: start;
@@ -116,7 +106,6 @@ section > h2 {
   font-size: 3rem;
 }
 #intro h1 {
-  /* font-size: 4.5vw; */
   color: var(--text2);
   flex-basis: auto;
 }
@@ -135,10 +124,8 @@ section > h2 {
   display: flex;
 }
 #about-me img {
-  /* width: fit-content; */
   flex: 1 1;
   padding: 0 60px 0 0;
-  /* margin: 0; */
 }
 
 #job {
@@ -150,7 +137,6 @@ section > h2 {
 #skills {
   display: flex;
   flex-direction: column;
-  /* flex-wrap: nowrap; */
 }
 #skills div > ul {
   display: flex;
@@ -169,11 +155,10 @@ section > h2 {
   position: relative;
   padding: 2rem 0.75em;
   width: 250px;
-  /* width: 30%; */
 
   display: flex;
   flex-direction: column;
-  /* isolation: isolate; */
+  /* flex: 1 1; */
 }
 #skills .skill::after {
   content: "";
@@ -218,7 +203,7 @@ section > h2 {
 
 /* Download Resume */
 #resume iframe {
-  flex: 1 1 auto;
+  flex: 1 1;
 }
 
 
@@ -329,3 +314,24 @@ section > h2 {
 #credits .right *{
     font-size: 1.2rem;
 }
+
+
+/* @media screen and (max-width:768px){
+  
+  h1{
+    font-size:xx-large;
+  }
+  h2{
+    font-size:x-large;
+  }
+  section{
+    padding: 10px;
+  }
+  #intro img{
+    width: 50vh;
+  }
+
+  #about-me .right{
+    order: 1;
+  }
+} */
