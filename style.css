@@ -7,6 +7,7 @@
   padding: 0;
   text-decoration: none;
   box-sizing: border-box;
+  border: none;
 }
 
 html {
@@ -193,6 +194,8 @@ section{
   width: var(--icon-size);
   height: var(--icon-size);
   margin-top: 10px;
+
+  /* box-shadow: 0 40px 20px rgba(59, 59, 204, 0.26); */
 }
 
 #email form {
@@ -202,8 +205,10 @@ section{
   text-align: start;
   padding: 30px;
   border-radius: 40px;
-  border-top: 5px solid var(--text2);
-  border-bottom: 10px solid var(--text2);
+  box-shadow: -5px 0 0,
+              -5px 10px 0,
+              0px 10px 0,
+              0 0px 5px;
 }
 #email .center {
   flex: 1 1;
@@ -217,7 +222,6 @@ section{
   background-color: var(--bg2);
 
   border-radius: 10px;
-  border: none;
   padding: 10px;
 
   height: clamp(30px, 4vmin, 1.5rem);;
@@ -233,24 +237,27 @@ section{
 #email input:focus,
 #email input::selection,
 #email input:hover{
-  box-sizing: border-box;
   outline: none;
-  border-bottom: 5px solid white;
-
+  box-shadow: inset 0px -5px 0 0px white;
+  
 }
 
 #email textarea {
   flex: 1 0;
 }
 #email button {
-  border-radius: 10px;
-  padding: 1em 2em;
+  border-radius: 90px;
+  padding: 0.5em 1.5em;
   background-color: var(--text2);
   color: var(--bg1);
   font-size: clamp(1em, 5vmin, 1.5em);
+  place-self: center;
 }
-#email button:active{
-  border: 5px solid white;
+#email button:active,
+#email button:focus,
+#email button:hover{
+  outline: none;
+  box-shadow: 0 0 5px 5px rgb(138, 106, 0);
 }
 #email label,
 #email button {
