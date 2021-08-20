@@ -46,7 +46,7 @@ p , a, li{font-size: clamp(1rem, 4vmin, 1.5rem);}
 li  {margin-left: 25px;}
 a   {color: var(--text2)}
 
-img{width: clamp(320px, 50vmax, 80vh);}
+img{width: clamp(300px, 80vmin, 80vh);}
 
 section{
   overflow-x: hidden;
@@ -56,7 +56,7 @@ section{
   flex-wrap: wrap;
   justify-content: center;
   align-content: center;
-  height: 100vh;
+  min-height: 100vh;
 }
 .left, .right{
   display: grid;
@@ -90,6 +90,15 @@ section{
 
 
 /* Skills Page */
+@media screen and (max-width: 700px){
+  #skills .content-bot{overflow-x: scroll;}
+  #skills .content-bot > ul {margin-left: 700px;} 
+}
+#skills h2{
+  isolation: isolate;
+  position: relative;
+  top: 0;
+}
 #skills .content-bot > ul {
   display: flex;
   justify-content: space-around;
@@ -141,11 +150,9 @@ section{
 
   font-family: var(--cool-font2);
   text-align: left;
-  display: grid;
-  grid-auto-rows: minmax(100px, auto);
 }
 #skills .project > li {
-  padding: 25px 0;
+  padding-block: clamp(0px, 2vmin, 25px);
 }
 
 
@@ -158,19 +165,18 @@ section{
 #resume .right {
   display: flex;
   flex: 1 1;
-  height: 100%;
-}
-@media screen {
-  
+  min-height: 100vmin;
+  padding-block: 10px;
 }
 
 
 
 
 /* Social Media and links */
-#email{
-  display: flex;
+@media screen and (max-width:700px){
+  #email{flex-direction: column-reverse;}
 }
+#email{display: flex;}
 #email > * {
   display: grid;
   place-items: center;
