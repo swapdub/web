@@ -65,6 +65,7 @@ section{
   flex: 1 1;
   margin: clamp(25px, 2vmax, 100px);
 }
+.content{min-width: 25ch;}
 
 
 #intro .floating {
@@ -90,9 +91,12 @@ section{
 
 
 /* Skills Page */
-@media screen and (max-width: 700px){
+@media screen and (max-width: 1330px){
   #skills .content-bot{overflow-x: scroll;}
-  #skills .content-bot > ul {margin-left: 700px;} 
+  #skills .content-bot > ul {margin-left: calc(1330px - 100vw);} 
+}
+@media screen and (max-width: 700px){
+  #skills .content-bot > ul {margin-left: calc(700px);} 
 }
 #skills h2{
   isolation: isolate;
@@ -181,7 +185,7 @@ section{
   display: grid;
   place-items: center;
   flex: 1 1;
-  padding: 2em;
+  /* padding: 2em; */
 }
 #email .links {
   flex: 1 1;
