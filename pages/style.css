@@ -1,0 +1,15 @@
+body {
+    margin: 1em;
+    background-color: black;
+    color: white;
+    font-family: monospace;
+}
+
+ul {
+    /* display: grid; */
+    /* flex-wrap: wrap; */
+    margin-block-end: 1em;
+}
+a{
+    color: grey;
+}
