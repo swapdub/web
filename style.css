@@ -1,275 +1,68 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+:root{
+  --sidebar-width: 10%;
+  --sidebar-padding: 0.5em;
+  --top-padding: 20px;
+}
 
-*,
-*::before,
-*::after {
+body {
+  width:100vw;
+  height:100vh;
+  background-color: black;
+  color: white;
+  font-family: monospace;
   margin: 0;
-  padding: 0;
-  text-decoration: none;
-  box-sizing: border-box;
-  border: none;
+  display: flex;
 }
-
-html {
-  --cool-font: italic clamp(1.25em, 15vmin, 7em) / 1.25 marck script, purisa,
-    segoe script, comic sans ms, cursive;
-  --cool-font2: "Courier New", Courier, monospace;
+iframe{
+  width: 100%;
+}
+ul {
+  margin-block-end: 1em;
+}
+.main-container{
+  margin-left: var(--sidebar-width);
+  padding: 2px 10px;
   
-  --bg1: #222;
-  --bg2: #333;
-  --text1: #dddee0;
-  --text2: #e0a526;
-  
-  overflow-x: hidden;
-  color: var(--text1);
-  background-color: var(--bg1);
-  font-family: "Roboto", sans-serif;
   scroll-behavior: smooth;
-}
-
-.maincontainer{
-  height: 100vh;
-  width: 100vw;
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
+  overflow-x: hidden;
 }
-h1{
-  color: var(--text2);
-  font: var(--cool-font);
-  font-size: clamp(1.5rem, 10vmin, 5rem);
+.main-container a{
+  color: rgb(180, 180, 180);
 }
-h3  {font-size: clamp(1.5rem, 9vmin, 4rem);}
-h4  {font-size: clamp(0.5rem, 5vmin, 2.5rem);}
-
-h2  {font-size: clamp(2rem, 10vmin, 4rem); text-align: center;}
-p , a, li{font-size: clamp(1rem, 4vmin, 1.5rem);}
-li  {margin-left: 25px;}
-a   {color: var(--text2)}
-
-img{width: clamp(300px, 80vmin, 80vh);}
-
 section{
+  padding-block: 5em;  
+  scroll-snap-align: center;
   overflow-x: hidden;
   overflow-y: hidden;
-  scroll-snap-align: center;
+}
+section:nth-child(1){
+  padding-top: 10vh;
+}
+.sidebar{
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-content: center;
-  min-height: 100vh;
-}
-.left, .right{
-  display: grid;
-  place-items: center;
-  height: auto;
-  flex: 1 1;
-  margin: clamp(25px, 2vmax, 100px);
-}
-.content{min-width: 25ch;}
+  flex-direction: column;
+  width:var(--sidebar-width);
+  height:100%;
+  padding-top: 12vh;
+  position: fixed;
 
-
-#intro .floating {
-    animation-name: floating;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
-    margin-bottom: 20px;
-  }
-  @keyframes floating {
-    0% {
-      transform: translate(0, 0px);
-    }
-    50% {
-      transform: translate(0, 15px);
-    }
-    100% {
-      transform: translate(0, -0px);
-    }
-  }
-
-
-
-
-/* Skills Page */
-@media screen and (max-width: 1330px){
-  #skills .content-bot{overflow-x: scroll;}
-  #skills .content-bot > ul {margin-left: calc(1330px - 100vw);} 
-}
-@media screen and (max-width: 700px){
-  #skills .content-bot > ul {margin-left: calc(700px);} 
-}
-#skills h2{
-  isolation: isolate;
-  position: relative;
-  top: 0;
-}
-#skills .content-bot > ul {
-  display: flex;
-  justify-content: space-around;
-  flex: 1 1;
-
-  font: var(--cool-font);
-  font-weight: 900;
-  color: var(--text2);
   text-align: center;
+  gap: 2em
+}
+.sidebar a{
+  color: inherit;
   text-decoration: none;
-  list-style: none;
+
+}
+.sidebar > a,
+.sidebar > a:hover{
+  padding: var(--sidebar-padding);
 }
 
-#skills .skill {
-  position: relative;
-  padding: 1rem 0em;
-  width: 250px;
-
-  display: flex;
-  flex-direction: column;
-}
-#skills .skill::after {
-  content: "";
-
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-
-  transform-origin: 0 100%;
-  transform: scaleY(0.02);
-  transition: transform 0.25s;
-
-  background: #444;
-  mix-blend-mode: lighten;
-}
-#skills .skill:hover {
-  outline: none;
-}
-#skills .skill:focus::after,
-#skills .skill:hover::after {
-  transform: none;
-}
-
-#skills .skill > ul {
-  width: 250px;
-  z-index: 1;
-
-  font-family: var(--cool-font2);
-  text-align: left;
-}
-#skills .project > li {
-  padding-block: clamp(0px, 2vmin, 25px);
-}
-
-
-
-
-
-
-/* Download Resume */
-#resume iframe,
-#resume .right {
-  display: flex;
-  flex: 1 1;
-  min-height: 100vmin;
-  padding-block: 10px;
-}
-
-
-
-
-/* Social Media and links */
-@media screen and (max-width:700px){
-  #email{flex-direction: column-reverse;}
-}
-#email{display: flex;}
-#email > * {
-  display: grid;
-  place-items: center;
-  flex: 1 1;
-  /* padding: 2em; */
-}
-#email .links {
-  flex: 1 1;
-  display: flex;
-  align-items: flex-start;
-  text-align: center;
-}
-#email .links a {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 1em 3em;
-}
-#email .links img {
-  --icon-size: 80px;
-  width: var(--icon-size);
-  height: var(--icon-size);
-  margin-top: 10px;
-
-  /* box-shadow: 0 40px 20px rgba(59, 59, 204, 0.26); */
-}
-
-#email form {
-  color: var(--text2);
-  font-family: var(--cool-font2);
-  font-weight: 700;
-  text-align: start;
-  padding: 30px;
-  border-radius: 40px;
-  box-shadow: -5px 0 0,
-              -5px 10px 0,
-              0px 10px 0,
-              0 0px 5px;
-}
-#email .center {
-  flex: 1 1;
-  text-transform: uppercase;
-  display: flex;
-  flex-direction: column;
-}
-#email textarea,
-#email input {
-  color: var(--text1);
-  background-color: var(--bg2);
-
+.sidebar > a:hover{
+  color: black;
+  background: white;
   border-radius: 10px;
-  padding: 10px;
-
-  height: clamp(30px, 4vmin, 1.5rem);;
-  width: clamp(1rem, 80vmin, 80ch);;
-  resize: none;
-}
-
-#email textarea:hover,
-#email textarea:focus,
-#email textarea:active,
-#email textarea::selection,
-#email input:active,
-#email input:focus,
-#email input::selection,
-#email input:hover{
-  outline: none;
-  box-shadow: inset 0px -5px 0 0px white;
-  
-}
-
-#email textarea {
-  flex: 1 0;
-}
-#email button {
-  border-radius: 90px;
-  padding: 0.5em 1.5em;
-  background-color: var(--text2);
-  color: var(--bg1);
-  font-size: clamp(1em, 5vmin, 1.5em);
-  place-self: center;
-}
-#email button:active,
-#email button:focus,
-#email button:hover{
-  outline: none;
-  box-shadow: 0 0 5px 5px rgb(138, 106, 0);
-}
-#email label,
-#email button {
-  margin: 10px 0;
 }

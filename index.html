@@ -5,11 +5,14 @@
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-8PPRJBJBM6"></script>
 	<script>
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
+		window.dataLayer = window.dataLayer || [];
 
-	gtag('config', 'G-8PPRJBJBM6');
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag('js', new Date());
+
+		gtag('config', 'G-8PPRJBJBM6');
 	</script>
 	<meta charset="UTF-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -48,71 +51,56 @@
 </head>
 
 <body>
-	<div class="maincontainer">
-		<section id="intro">
-			<div class="left">
-				<div class="content">
-					<h3>
-						Hey, my name is
-						<h1 class="floating"><strong>Swapnil Dubey.</strong></h1>
-					</h3>
-					<h4>Welcome to my corner of the internet</h4>
-				</div>
-			</div>
+	<div class="sidebar">
+		<a href="#Hi">Hi</a>
+		<a href="#Intro">Intro</a>
+		<a href="#Skills">Skills</a>
+		<a href="#Resume">Resume</a>
+		<a href="#Socials">Socials</a>
+		<a href="#Credits">Credits</a>
+	</div>
+	<div class="main-container">
+		<section id="Hi">
 
-			<div class="right">
-				<img src="./images/learning-concept-illustration/swap.png" alt="Generic Brown Science Student Image" />
-			</div>
-			
-			<!-- Credits: https://www.tonybatts.com/#scroll -->
-			<!-- <div class="downarrow">
-				<span class="icon-keyboard_arrow_up bounce"></span>
-			</div> -->
-		</section>
-		<section id="about-me">
-			<div class="left">
-				<img src="https://standard.psu.edu/images/uploads/psu-mark.svg" alt="Penn State Logo" srcset="">
-			</div>
+			<h3>Hey, my name is<h1 class="floating"><strong>Swapnil Dubey.</strong></h1>
+			</h3>
+			<h4>Welcome to my corner of the internet</h4>
 
-			<div class="right">
-				<div class="content">
-					<h2>About Me 🎓</h2>
-					<p>
-						I graduated <a href="https://www.psu.edu/" target="blank" rel="noopener noreferrer">Pennsylvania
-							State University</a> in May
-						2021 with a
-						Bachelors of Science in 2 fields:
-					</p>
-					<br>
-					<ul>
-						<li>Electrical Engineering</li>
-						<li>Astronomy and Astrophysics.</li>
-					</ul>
-	
-					<br>
-	
-					<p>
-						For my
-						<a href="https://sites.psu.edu/lfshowcasesp20/2020/04/29/schlumberger-5-downhole-electro-hydraulic-control-system/"
-							target="_blank" rel="noopener noreferrer">
-							Final Year Project</a>,
-						I got the chance to work with a great team of Engineers and our
-						sponsors from <a href="https://www.slb.com/" target="_blank"
-							rel="noopener noreferrer">Schlumerger</a>.
-						<br> <br>
-						My skills as a Developer and Electrical engineer were tested to the limit but overcoming that
-						challenge helped me learn and grow a lot. I wish to continue having such experiences throughout my
-						career.
-					</p>
-
-				</div>
-			</div>
-		</section>
-		<section id="job">
-			<h2>And I am currently looking for a job 😢</h2>
 		</section>
 
-		<section id="skills">
+		<section id="Intro">
+
+			<h2>About Me 🎓</h2>
+			<p>
+				I graduated <a href="https://www.psu.edu/" target="blank" rel="noopener noreferrer">Pennsylvania
+					State University</a> in May
+				2021 with a
+				Bachelors of Science in 2 fields:
+			</p>
+			<br>
+			<ul>
+				<li>Electrical Engineering</li>
+				<li>Astronomy and Astrophysics.</li>
+			</ul>
+
+			<br>
+
+			<p>
+				For my
+				<a href="https://sites.psu.edu/lfshowcasesp20/2020/04/29/schlumberger-5-downhole-electro-hydraulic-control-system/"
+					target="_blank" rel="noopener noreferrer">
+					Final Year Project</a>,
+				I got the chance to work with a great team of Engineers and our
+				sponsors from <a href="https://www.slb.com/" target="_blank" rel="noopener noreferrer">Schlumerger</a>.
+				<br> <br>
+				My skills as a Developer and Electrical engineer were tested to the limit but overcoming that
+				challenge helped me learn and grow a lot. I wish to continue having such experiences throughout my
+				career.
+			</p>
+
+		</section>
+
+		<section id="Skills">
 			<!-- cards with each skill -->
 			<h2>My Skills</h2>
 			<div class="content-bot">
@@ -189,91 +177,83 @@
 
 
 		</section>
-		<section id="resume">
-			<div class="left">
-				<div class="content">
-					<h2>Resume</h2>
-					<p>Feel free to <a href="./resume/R4_Resume_Oct_2021.pdf" download>download my resume</a> below!</p>
-				</div>
-			</div>
-			<div class="right">
-				<iframe src="./resume/R4_Resume_Oct_2021.pdf#zoom=80" frameborder="0"
-					aria-label="Resume in Printable document format">
-				</iframe>
+		<section id="Resume">
+			<h2>Resume</h2>
+			<p>Feel free to <a href="./resume/R4_Resume_Oct_2021.pdf" download>download my resume</a>!</p>
 
-			</div>
+			<iframe src="./resume/R4_Resume_Oct_2021.pdf#zoom=80" frameborder="0"
+				aria-label="Resume in Printable document format">
+			</iframe>
+
+
 		</section>
 
 
-		<section id="email">
-			<div class="right">
-				<form target="blank" action="https://formsubmit.co/6cc55035ce0b7afa771b6e2d4da9febd" method="POST">
-					<div class="center">
-						<label for="name">Your Name</label>
-						<input type="text" name="name" class="form-control" required>
-	
-						<label for="email"> E-mail</label>
-						<input type="email" name="email" class="form-control" required>
-	
-						<label for="subject">Subject</label>
-						<input type="subject" name="subject" class="form-control">
-	
-						<label for="message">Your Message</label>
-						<textarea placeholder="Feel free to share any thoughts and ideas here!" class="form-control"
-							name="message" rows="10" required></textarea>
-	
-						<button type="submit" class="btn">
-							Send
-						</button>
-					</div>
-				</form>
-			</div>
-			<div class="left">
-				<div class="content">
-					<h2>Connect with me!</h2>
-	
-					<div class="links">
-						<a href="https://www.linkedin.com/in/swapnil-dubey/" target="blank">
-							<p>LinkedIn</p>
-							<img src="./images/5296501_linkedin_network_linkedin logo_icon.png" alt="" />
-						</a>
-						<a href="https://github.com/swapdub" target="blank">
-							<p>Github</p>
-							<img src="./images/4202098_github_code_developer_logo_icon.png" alt="" />
-						</a>
-					</div>
+		<section id="Socials">
+
+			<div class="content">
+				<h2>Connect with me!</h2>
+
+				<div class="links">
+					<a href="https://www.linkedin.com/in/swapnil-dubey/" target="blank">
+						<p>LinkedIn</p>
+					</a>
+					<a href="https://github.com/swapdub" target="blank">
+						<p>Github</p>
+					</a>
 				</div>
 			</div>
+
+			<form target="blank" action="https://formsubmit.co/6cc55035ce0b7afa771b6e2d4da9febd" method="POST">
+				<div class="center">
+					<label for="name">Your Name</label>
+					<input type="text" name="name" class="form-control" required>
+					<br>
+					<label for="email"> E-mail</label>
+					<input type="email" name="email" class="form-control" required>
+					<br>
+
+					<label for="subject">Subject</label>
+					<input type="subject" name="subject" class="form-control">
+					<br>
+
+					<label for="message">Your Message</label>
+					<textarea placeholder="Feel free to share any thoughts and ideas here!" class="form-control"
+						name="message" rows="10" required></textarea>
+
+					<br>
+					<button type="submit" class="btn">
+						Send
+					</button>
+				</div>
+			</form>
+
+
+
 		</section>
 
+		<section id="Credits">
 
-		<!-- <section class="skills"></section> -->
-		<section id="credits">
-			<div class="left">
-				<h2>Credits</h2>
+			<h2>Credits</h2>
+			<ul>
+				<li>The list below hopes to credit those whose work has made this website
+					possible:
+					<ul>
+						<li>
+							<a href="https://www.freepik.com/vectors/school" target="blank"> 🔗 School vector
+								created by stories
+								-
+								www.freepik.com</a>
 
-			</div>
-			<div class="right">
-				<ul>
-					<li>The list below hopes to credit those whose work has made this website
-						possible:
-						<ul>
-							<li>
-								<a href="https://www.freepik.com/vectors/school" target="blank"> 🔗 School vector
-									created by stories
-									-
-									www.freepik.com</a>
+						</li>
 
-							</li>
-
-						</ul>
-					</li>
-					<li>
-						Favicon Artist: 유노 Unoh | <a
-							href="https://www.youtube.com/channel/UCmi_1K0EhhgipONRw4dBJLg">Youtube</a>
-					</li>
-				</ul>
-			</div>
+					</ul>
+				</li>
+				<li>
+					Favicon Artist: 유노 Unoh | <a
+						href="https://www.youtube.com/channel/UCmi_1K0EhhgipONRw4dBJLg">Youtube</a>
+				</li>
+			</ul>
 		</section>
 	</div>
 </body>
